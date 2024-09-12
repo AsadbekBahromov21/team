@@ -2,12 +2,12 @@ import ReactStars from "react-stars";
 import Skeleton from "../skeleton/skeleton";
 const Products = ({ data, isLoading }) => {
   return (
-    <div className=" w-full  lg:gap-4 grid grid-cols-1 sd:grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-4 container mx-auto">
+    <div className=" w-full  lg:gap-4 grid grid-cols-1 sd:grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-4 gap-3 container mx-auto">
       {data?.map((category) => (
-        <div className="  " key={category.id}>
-          <div className="p-3 rounded-[20px]">
+        <div className="" key={category.id}>
+          <div className="w-full h-[280px] lg:h-[289px] sd:h-[220px] rounded-[20px] overflow-hidden bg-[#f0eeed]">
             <img
-              className="w-full h-[280px] lg:h-[289px] sd:h-[220px]  object-cover rounded-[20px] duration-300 hover:scale-105"
+              className="w-full h-full object-contain duration-300 hover:scale-105"
               src={
                 category.url.length > 0
                   ? category.url[0]
@@ -46,8 +46,7 @@ const Products = ({ data, isLoading }) => {
           </div>
         </div>
       ))}
-      {isLoading &&
-        new Array(4).fill().map((_, idx) => <Skeleton key={idx.id} />)}
+      {isLoading && new Array(4).fill().map((_, idx) => <Skeleton key={idx} />)}
     </div>
   );
 };

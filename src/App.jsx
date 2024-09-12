@@ -5,6 +5,10 @@ import Layout from "./layout/layout";
 
 import Home from "./pages/home/Home";
 
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+
 function App() {
   return (
     <>
