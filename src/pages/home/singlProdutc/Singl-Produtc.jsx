@@ -4,6 +4,7 @@ import { FaCheck } from "react-icons/fa6";
 import ReactStars from "react-stars";
 import { useParams } from "react-router-dom";
 import { useGetSingleCategoryQuery } from "../../../redux/api/category-api";
+import Customer from "../../../components/customer/Customer";
 const SinglProdutc = () => {
   const { id } = useParams();
   const { data } = useGetSingleCategoryQuery(id);
@@ -107,6 +108,7 @@ const SinglProdutc = () => {
           </div>
         </div>
       </div>
+      <Customer/>
     </>
   );
 };
