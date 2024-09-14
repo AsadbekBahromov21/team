@@ -7,29 +7,31 @@ import rasm from "../../assets/footer.png";
 
 const Footer = () => {
   return (
-    <div className="footer pt-10">
-      <div className=" flex  lg:flex-row md:flex-row sm:flex-row lg:justify-between container mx-auto px-5  bg-[#000] mt-4 rounded-[20px] py-9 ">
-        <div>
-          <p className=" text-5xl font-[00]   text-white">
-            STAY UPTO DATE ABOUT OUR LATEST OFFERS{" "}
-          </p>
-        </div>
-        <div className="w-1/3">
-          <div className=" p-2 bg-white  flex items-center rounded-[60px] py-1 px-5 dark:bg-black dark:text-white ">
-            <CgMail className="text-5xl  dark:text-white" />
-            <input
-              type="text"
-              className=" text-zinc-500 w-full text-[17px] py-2 px-2  dark:bg-black dark:text-white"
-              placeholder="
- Enter your email address"
-            />
+    <div className="footer   pt-10 ">
+      <div className="container relative ">
+        <div className=" flex  lg:flex-row absolute md:flex-row sm:flex-row lg:justify-between  px-5   bg-[#000] mt-6 z-20 rounded-[20px] py-9 ">
+          <div>
+            <p className=" text-5xl font-[00]   text-white">
+              STAY UPTO DATE ABOUT OUR LATEST OFFERS{" "}
+            </p>
           </div>
-          <button className="footer__btn hero__btn w-full  py-2 mt-3 px-2 rounded-[60px] text-xl   bg-white dark:bg-black dark:text-white ">
-            Subscribe to Newsletter
-          </button>
+          <div className="w-1/3">
+            <div className=" p-2 bg-white  flex items-center rounded-[60px] py-1 px-5 dark:bg-black dark:text-white ">
+              <CgMail className="text-5xl  dark:text-white" />
+              <input
+                type="text"
+                className=" text-zinc-500 w-full text-[17px] py-2 px-2  dark:bg-black dark:text-white"
+                placeholder="
+ Enter your email address"
+              />
+            </div>
+            <button className="footer__btn hero__btn w-full  py-2 mt-3 px-2 rounded-[60px] text-xl   bg-white dark:bg-black dark:text-white ">
+              Subscribe to Newsletter
+            </button>
+          </div>
         </div>
       </div>
-      <div className="bg-[#F0F0F0]  py-[50px]">
+      <div className="bg-[#F0F0F0]  py-[50px] mt-[150px]">
         <div className="footer__bottom container mx-auto px-5 mt-5 justify-between flex flex-wrap">
           <div className="footer__card px-[20px] mt-[20px]">
             <p className=" text-[#000] text-5xl font-[900] navbar__logo">
