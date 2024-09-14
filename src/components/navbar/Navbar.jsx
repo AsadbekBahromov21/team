@@ -1,33 +1,94 @@
-import React from 'react'
-import logo from "../../assets/logo.svg"
-import  "./Navbar.css"
-import { LuShoppingCart, LuUserCircle2, LuHeart } from "react-icons/lu";
+import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+import {
+  AccountIcon,
+  CartIcon,
+  DwopdownIcon,
+  SearchIcon,
+} from "../../icon/index";
+import { Dropdown, Space } from "antd";
 
-function Navbar({items}) {
+function Navbar(scroll) {
+  const items = [
+    {
+      key: "1",
+      label: "Kiyimlar",
+    },
+    {
+      key: "3",
+      label: "Sport tavarlar",
+      disabled: false,
+    },
+    {
+      key: "4",
+      danger: false,
+      label: "Jihozlar",
+    },
+  ];
   return (
-    <div className='container mx-auto flex justify-center items-center gap-10 mb-6'>
-        <div className='logo'>
-            <img src={logo} alt="" />
-        </div>
-        <ul className='navbar__collection flex justify-center items-center gap-10'>
-            {
-                items?.map((item, inx) => (
-                <li key={inx} className='text-base font-normal text-black'>
-                    {item}
-                </li>
-                ))
-            }
+    <nav
+      className={`py-[24px] duration-300 flex items-center "backdrop-blur-xl py-[14px]" : "bg-transparent"
+      }`}
+    >
+      <div className="container flex items-center justify-between gap-[40px]">
+        <Link to={"/"} className="text-[32px] font-bold font-integral">
+          SHOP.CO
+        </Link>
+        <ul className="hidden lg:flex items-center gap-[24px] whitespace-nowrap">
+          <li>
+            <Dropdown
+              menu={{
+                items,
+              }}
+            >
+              <a
+                onClick={(e) => e.preventDefault()}
+                className="cursor-pointer text-black text-[16px]"
+              >
+                <Space>
+                  Shop
+                  <DwopdownIcon />
+                </Space>
+              </a>
+            </Dropdown>
+          </li>
+          <li>
+            <Link to={"#"} className="cursor-pointer text-black text-[16px]">
+              On Sale
+            </Link>
+          </li>
+          <li>
+            <Link to={"#"} className="cursor-pointer text-black text-[16px]">
+              New Arrivals
+            </Link>
+          </li>
+          <li>
+            <Link to={"#"} className="cursor-pointer text-black text-[16px]">
+              Brands
+            </Link>
+          </li>
         </ul>
-        <div className='bg-[#F0F0F0] border flex-1 rounded-[62px] h-12 flex justify-center items-center'>
-            <input className='navbar__inp w-full rounded-[62px] h-full bg-inherit py-3 px-4' type="text" placeholder='Search for products...'/>
+        <form className="form hidden sm:flex items-center bg-[#f0eeed] rounded-[62px] px-[16px] w-full">
+          <button type="submit" className={"rounded-full"}>
+            <SearchIcon />
+          </button>
+          <input
+            type="text"
+            className="w-full h-[48px] rounded-[62px] border-none outline-none pl-[12px] text-black bg-transparent"
+            placeholder="Search"
+          />
+        </form>
+        <div className="flex items-center gap-[14px]">
+          <button>
+            <CartIcon />
+          </button>
+          <button>
+            <AccountIcon />
+          </button>
         </div>
-        <div className='flex justify-center items-center gap-3.5'>
-        <LuHeart className='w-6 h-6'/>
-        <LuShoppingCart className='w-6 h-6'/>
-        <LuUserCircle2 className='w-6 h-6'/>
-        </div>
-    </div>
-  )
+      </div>
+    </nav>
+  );
 }
 
-export default Navbar
+export default Navbar;

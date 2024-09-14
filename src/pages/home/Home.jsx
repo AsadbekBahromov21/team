@@ -5,6 +5,7 @@ import { Button } from "antd";
 import Hero from "../../components/hero/Hero";
 import Animation from "../../components/animation/Animation";
 import Browse from "../../components/browse/Browse";
+import Customers from "../../components/customers/Customers";
 
 const Home = () => {
   const [limit, setLimit] = useState(4);
@@ -45,6 +46,7 @@ const Home = () => {
         />
       </section>
       <Browse />
+      <Customers />
     </>
   );
 };

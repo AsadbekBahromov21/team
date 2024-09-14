@@ -53,7 +53,7 @@ const Products = ({ data, isLoading }) => {
                   {discount > 0 && discount.toFixed(0)}%
                 </p>
               </div>
-              <button className="border bg-[#DEF9EC] py-[2px] px-[10px] text-[#fff] flex items-center justify-center rounded-[4px]">
+              <button className="border  py-[2px] px-[10px] text-[#fff] flex items-center justify-center rounded-[4px]">
                 <IoCartOutline className="text-[#3BB77E]" />{" "}
                 <p className="text-[13px] text-[#3BB77E] font-[500]">Add</p>
               </button>

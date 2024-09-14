@@ -8,7 +8,7 @@ import Home from "./pages/home/Home";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-
+import "swiper/css";
 function App() {
   return (
     <>
