@@ -1,6 +1,7 @@
 import ReactStars from "react-stars";
 import Skeleton from "../skeleton/skeleton";
 import { IoCartOutline } from "react-icons/io5";
+import { Link } from "react-router-dom";
 const Products = ({ data, isLoading }) => {
   return (
     <div className=" w-full  lg:gap-4 grid grid-cols-1 sd:grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-4 gap-3 container mx-auto">
@@ -10,15 +11,17 @@ const Products = ({ data, isLoading }) => {
         return (
           <div className="" key={category.id}>
             <div className="w-full h-[280px] lg:h-[289px] sd:h-[220px] rounded-[20px] overflow-hidden bg-[#f0eeed]">
-              <img
-                className="w-full h-full object-contain duration-300 hover:scale-105"
-                src={
-                  category.url.length > 0
-                    ? category.url[0]
-                    : "https://picsum.photos/400/150"
-                }
-                alt=""
-              />
+              <Link to={`/products/${category.id}`}>
+                <img
+                  className="w-full h-full object-contain duration-300 hover:scale-105"
+                  src={
+                    category.url.length > 0
+                      ? category.url[0]
+                      : "https://picsum.photos/400/150"
+                  }
+                  alt=""
+                />
+              </Link>
             </div>
             <div className="p-3 flex flex-col gap-1">
               <div className="flex flex-col gap-[4px]">

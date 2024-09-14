@@ -9,23 +9,23 @@ const Footer = () => {
   return (
     <div className="footer   pt-10 ">
       <div className="container relative ">
-        <div className=" flex  lg:flex-row absolute md:flex-row sm:flex-row lg:justify-between  px-5   bg-[#000] mt-6 z-20 rounded-[20px] py-9 ">
+        <div className=" lg:flex gap-[10px]  md:flex   absolute   px-5   bg-[#000] mt-6 z-20 rounded-[20px] py-9 ">
           <div>
-            <p className=" text-5xl font-[00]   text-white">
+            <p className=" lg:text-5xl md:text-[44px] sm:text-[36px] text-[28px]  font-[#000]   text-white">
               STAY UPTO DATE ABOUT OUR LATEST OFFERS{" "}
             </p>
           </div>
-          <div className="w-1/3">
-            <div className=" p-2 bg-white  flex items-center rounded-[60px] py-1 px-5 dark:bg-black dark:text-white ">
-              <CgMail className="text-5xl  dark:text-white" />
+          <div className="lg:w-[300px] md:w-[300px] sm:w-[300px]">
+            <div className=" p-2 bg-white  items-center flex rounded-[60px] py-1 px-5 dark:text-white ">
+              <CgMail className="text-3xl  text-[#eee]" />
               <input
                 type="text"
-                className=" text-zinc-500 w-full text-[17px] py-2 px-2  dark:bg-black dark:text-white"
+                className=" text-zinc-500 w-full text-[17px] py-2 px-2  dark:text-white"
                 placeholder="
  Enter your email address"
               />
             </div>
-            <button className="footer__btn hero__btn w-full  py-2 mt-3 px-2 rounded-[60px] text-xl   bg-white dark:bg-black dark:text-white ">
+            <button className="footer__btn hero__btn w-full  py-2 mt-3 px-2 rounded-[60px] text-xl   bg-white text-[#eee] ">
               Subscribe to Newsletter
             </button>
           </div>

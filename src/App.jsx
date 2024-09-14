@@ -9,12 +9,14 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import "swiper/css";
+import SinglProdutc from "./pages/home/singlProdutc/Singl-Produtc";
 function App() {
   return (
     <>
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route path="" element={<Home />} />
+          <Route path="products/:id" element={<SinglProdutc />} />
         </Route>
       </Routes>
     </>
