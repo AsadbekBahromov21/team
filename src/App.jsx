@@ -12,6 +12,7 @@ import "swiper/css";
 import SinglProdutc from "./pages/home/singlProdutc/Singl-Produtc";
 import Dashboard from "./pages/dashboard/Dashboard";
 import CreateProduct from "./pages/create-product/Create-product";
+import Wishlist from "./components/wishlist/Wishlist";
 function App() {
   return (
     <>
@@ -20,6 +21,7 @@ function App() {
           <Route path="" element={<Home />} />
           <Route path="products/:id" element={<SinglProdutc />} />
         </Route>
+        <Route path="/Wishlist" element={<Wishlist/>}/>
         <Route path="/dashboard" element={<Dashboard />}>
           <Route path="createproduct" element={<CreateProduct />} />
         </Route>

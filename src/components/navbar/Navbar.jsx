@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { LuCalendarHeart } from "react-icons/lu";
+
 import {
   AccountIcon,
   CartIcon,
@@ -78,12 +80,17 @@ function Navbar(scroll) {
             placeholder="Search"
           />
         </form>
-        <div className="flex items-center gap-[14px]">
-          <button>
+        <div className="flex items-center gap-[10px]">
+          <button className="text-[24px]">
+            <Link to={"Wishlist"}>
+            <LuCalendarHeart />
+            </Link>
+          </button>
+          <button className="text-[24px]">
             <CartIcon />
           </button>
           <Link to={`dashboard`}>
-            <button>
+            <button className="text-[24px]">
               <AccountIcon />
             </button>
           </Link>

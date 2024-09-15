@@ -2,6 +2,9 @@ import ReactStars from "react-stars";
 import Skeleton from "../skeleton/skeleton";
 import { IoCartOutline } from "react-icons/io5";
 import { Link } from "react-router-dom";
+
+
+import { FaHeart } from "react-icons/fa";
 const Products = ({ data, isLoading }) => {
   return (
     <div className=" w-full  lg:gap-4 grid grid-cols-1 sd:grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-4 gap-3 container mx-auto">
@@ -10,7 +13,10 @@ const Products = ({ data, isLoading }) => {
           ((category.oldPrice - category.price) / category.oldPrice) * 100;
         return (
           <div className="" key={category.id}>
-            <div className="w-full h-[280px] lg:h-[289px] sd:h-[220px] rounded-[20px] overflow-hidden bg-[#f0eeed]">
+            <div className="w-full h-[280px] lg:h-[289px] relative sd:h-[220px] rounded-[20px] overflow-hidden bg-[#f0eeed]">
+              <button>
+              <FaHeart className="absolute right-5 top-5 text-2xl z-40 hover:text-red-900" />
+              </button>
               <Link to={`/products/${category.id}`}>
                 <img
                   onClick={(event) => {
