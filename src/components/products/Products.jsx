@@ -13,6 +13,9 @@ const Products = ({ data, isLoading }) => {
             <div className="w-full h-[280px] lg:h-[289px] sd:h-[220px] rounded-[20px] overflow-hidden bg-[#f0eeed]">
               <Link to={`/products/${category.id}`}>
                 <img
+                  onClick={(event) => {
+                    window.scroll(0, 0);
+                  }}
                   className="w-full h-full object-contain duration-300 hover:scale-105"
                   src={
                     category.url.length > 0
