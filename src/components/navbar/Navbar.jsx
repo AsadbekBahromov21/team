@@ -82,9 +82,11 @@ function Navbar(scroll) {
           <button>
             <CartIcon />
           </button>
-          <button>
-            <AccountIcon />
-          </button>
+          <Link to={`dashboard`}>
+            <button>
+              <AccountIcon />
+            </button>
+          </Link>
         </div>
       </div>
     </nav>
